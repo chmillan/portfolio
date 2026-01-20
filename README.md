@@ -39,6 +39,7 @@ Application of machine learning methods in contexts where interpretability, vali
 Methodological analysis of sampling strategies and tolerance rules for repeated measurements, common in compliance, audit, and performance evaluation contexts.
 
 *Focus:* statistical modeling, simulation, uncertainty-aware decision support
+
 [Read case study](case-studies/robust-measurement-campaign-design.md)
 
 ---
