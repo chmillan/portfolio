@@ -34,14 +34,14 @@ End-to-end analytical study combining large-scale administrative records and con
 ### Temporal Convergence Analysis of Sequential Measurement Processes
 Investigation of convergence and stability properties in sequential data, addressing how much data is enough and when measurements become decision-relevant.
 
-*Focus:* time-series analysis,convergence analysis, stability diagnostics, robust aggregation, decision-oriented analytics
+**Focus:** time-series analysis, convergence analysis, stability diagnostics, robust aggregation, decision-oriented analytics
+
+[Read case study](case-studies/temporal-convergence-analysis.md)
 ---
 ### Designing Robust Measurement Campaigns
 Investigation of how sampling strategies, repetition rules, and tolerance thresholds affect the reliability and interpretability of measurement processes under variability.
 
-**Focus**: experimental design, sampling strategies, statistical modeling, simulation, uncertainty-aware decision support
-
-
+**Focus:** experimental design, sampling strategies, statistical modeling, simulation, uncertainty-aware decision support
 
 ---
 
