@@ -5,6 +5,7 @@ title: Large-Scale Connectivity Assessment Using Administrative and Measurement 
 # Large-Scale Connectivity Assessment Using Administrative and Measurement Data
 
 > Public project · Open data · Conference presentation · Media coverage
+> 
  📄 **Full report:** https://medicoes.nic.br/media/Publicacao-internet-escolas-2024.pdf
 
 ## Context
