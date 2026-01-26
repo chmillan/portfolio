@@ -37,6 +37,7 @@ Investigation of convergence and stability properties in sequential data, addres
 **Focus:** time-series analysis, convergence analysis, stability diagnostics, robust aggregation, decision-oriented analytics
 
 [Read case study](case-studies/temporal-convergence-analysis.md)
+
 ---
 ### Designing Robust Measurement Campaigns
 Investigation of how sampling strategies, repetition rules, and tolerance thresholds affect the reliability and interpretability of measurement processes under variability.
