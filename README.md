@@ -29,7 +29,7 @@ End-to-end analytical study combining large-scale administrative records and con
 
 **Focus:** data integration at scale, robust aggregation, spatial and distributional analysis, decision-oriented indicators, public-impact analytics
 
-Read case study
+[Read case study](case-studies/large-scale-connectivity-assessment.md)
 
 ### Temporal Convergence Analysis of Sequential Measurement Processes
 Investigation of convergence and stability properties in sequential data, addressing how much data is enough and when measurements become decision-relevant.
@@ -41,7 +41,7 @@ Investigation of how sampling strategies, repetition rules, and tolerance thresh
 
 **Focus**: experimental design, sampling strategies, statistical modeling, simulation, uncertainty-aware decision support
 
-[Read case study](case-studies/robust-measurement-campaign-design.md)
+
 
 ---
 
