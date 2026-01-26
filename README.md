@@ -23,32 +23,33 @@ I currently work at **NIC.br**, contributing to analytical systems and studies r
 
 These projects represent my most relevant professional work as an applied Data Scientist, with an emphasis on statistical rigor, reproducibility, and decision support.
 
+---
+### Large-Scale Connectivity Assessment Using Administrative and Measurement Data  
+End-to-end analytical study combining large-scale administrative records and continuous performance measurements to assess coverage, quality, and inequality in a national service infrastructure.
 
+**Focus:** data integration at scale, robust aggregation, spatial and distributional analysis, decision-oriented indicators, public-impact analytics
 
-### **Decision-Oriented Machine Learning**
-Application of machine learning methods in contexts where interpretability, validation, and analytical insight are more important than raw predictive performance.
+Read case study
 
-- Dimensionality reduction and feature analysis  
-- Model evaluation and error analysis  
-- Responsible and applied ML practices  
+### Temporal Convergence Analysis of Sequential Measurement Processes
+Investigation of convergence and stability properties in sequential data, addressing how much data is enough and when measurements become decision-relevant.
 
-**Focus:** supporting decisions, not just predictions
-
+*Focus:* time-series analysis,convergence analysis, stability diagnostics, robust aggregation, decision-oriented analytics
 ---
 ### Designing Robust Measurement Campaigns
-Methodological analysis of sampling strategies and tolerance rules for repeated measurements, common in compliance, audit, and performance evaluation contexts.
+Investigation of how sampling strategies, repetition rules, and tolerance thresholds affect the reliability and interpretability of measurement processes under variability.
 
-*Focus:* statistical modeling, simulation, uncertainty-aware decision support
+**Focus**: experimental design, sampling strategies, statistical modeling, simulation, uncertainty-aware decision support
 
 [Read case study](case-studies/robust-measurement-campaign-design.md)
 
 ---
-### Temporal Convergence Analysis of Sequential Measurement Processes
-Analysis of temporal dynamics and aggregation robustness in sequential data, a recurring problem in domains such as People Analytics, compliance monitoring, and quality assessment.
 
-*Focus:* time-series analysis, statistical criteria design, decision-oriented analytics
+### Robust Indicator Design for Noisy Performance Measurements
 
----
+Methodological development of robust indicators to summarize highly variable measurement distributions, balancing sensitivity to real changes and resistance to extreme values.
+
+**Focus**: robust statistics, simulation-based validation, outlier handling, decision-oriented metric design
 
 
 ### **End-to-End Analytical Projects**
