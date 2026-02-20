@@ -7,49 +7,16 @@ While the analytical track emphasizes statistical modeling, this track highlight
 
 ---
 
-## Containerized Analytical Platform for Connectivity Monitoring
+## End-to-End Engineering of an Analytical Platform
 
-Design and implementation of a containerized Shiny and API-based analytical system serving large-scale connectivity indicators.
+Design and evolution of a containerized analytical system combining database optimization, API integration, reactive tuning, and CI-driven deployment.
 
-**Engineering focus:**
+**Engineering scope:**
 
-- Multi-stage Docker builds (builder + runtime separation)
-- Explicit Linux system dependency management (GDAL, libpq, etc.)
-- Reproducible environments with locked dependencies
-- CI-driven automated image builds  
-- Modular separation of processing, API, and visualization layers  
+- Multi-stage Docker builds and environment isolation  
+- Schema versioning and materialized views  
+- API development with controlled DB connections  
+- Reactive optimization in Shiny  
+- Load testing and validation  
 
-
-→ [Read full case study](containerized-analytical-platform.md)  
-→ [Deployment guide (Docker Buildx + CI/CD)](deployment-guide-buildx-ci.md)
-
----
-
-## Production API with Database Integration
-
-Development of a containerized API service integrated with relational databases.
-
-**Engineering focus:**
-
-- Plumber-based API design
-- Connection pooling and controlled resource management
-- Environment isolation inside Linux containers
-- Clean shutdown hooks
-- Production-ready image configuration
-
-→ (coming soon)
-
----
-
-## Load Testing and Stability Validation
-
-Performance validation of interactive analytical systems under concurrent access.
-
-**Engineering focus:**
-
-- Load testing using shinycannon
-- Identification of runtime bottlenecks
-- Iterative refinement of container configuration
-- Ensuring parity between local and CI environments
-
-→ (coming soon)
+→ [Read full case study](analytical-platform-engineering.md)
