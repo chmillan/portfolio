@@ -1,4 +1,8 @@
-# End-to-End Engineering of an Analytical Platform  
+---
+title: "End-to-End Engineering of an Analytical Platform"
+format: html
+
+---
 **From architecture design to performance validation**
 
 > Case study based on professional work developed in institutional/private repositories.  
@@ -118,31 +122,31 @@ This reduced latency spikes during interactive use.
 
 ---
 
-## 7. Performance Validation
+## 7. Performance results
+---
+Performance improvements were validated empirically after architectural changes.
 
-Performance optimization was validated systematically rather than assumed.
 
-**Validation approach:**
+### End-to-End Session Duration (per user session)
 
-- Baseline timing collection  
-- End-to-end measurement of critical interactions  
-- Load testing using shinycannon  
-- Monitoring latency distribution (e.g., p50/p95)  
-- Query inspection when necessary  
+| Architecture | Median (s) | SD (s) |
+|---|---:|---:|
+| Classic | 115.9 | 0.8 |
+| New | 45.2 | 1.2 |
 
-The focus was reducing variability and improving predictability.
 
 ---
 
-## 8. Engineering Outcomes
+### Interaction Latency Under Concurrency 
 
-This layered approach resulted in:
+| Architecture | Metric | Typical range (s) | Notable behavior |
+|---|---|---:|---|
+| New | p50 (median) | ~0.05–0.12 | Low typical latency across concurrency |
+| New | p95 (tail) | ~0.10–1.30 | Spike around concurrency ~2 (tail instability) |
+| Classic | p50 (median) | ~0.03–0.06 | Stable and consistently low |
+| Classic | p95 (tail) | ~0.12–0.20 | Relatively stable tail latency |
 
-- More stable response times  
-- Reduced unnecessary recomputation  
-- Clear separation between analytical logic and infrastructure concerns  
-- Reproducible builds and deployments  
-- Greater confidence in performance under real-world usage  
+These results validated database pre-aggregation, API refinement, and reactive optimization decisions.
 
 ---
 
