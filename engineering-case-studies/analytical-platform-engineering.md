@@ -1,157 +1,78 @@
----
-title: "End-to-End Engineering of an Analytical Platform"
-format: html
-
----
+# End-to-End Engineering of an Analytical Platform  
 **From architecture design to performance validation**
 
-> Case study based on professional work developed in institutional/private repositories.  
-> This document focuses on architectural decisions, engineering trade-offs, and validation practices rather than source code.
-
 ---
 
-## 1. Context
+## Context & Architecture
 
-The system was designed to deliver large-scale connectivity indicators through:
+The system delivers large-scale connectivity indicators through:
 
-- A Shiny-based interactive dashboard  
+- A Shiny interactive dashboard  
 - A Plumber API layer  
 - A relational database backend  
 - A containerized deployment workflow  
 
-As usage increased, engineering decisions became critical to ensure:
+To ensure stability under real-world usage, the architecture was structured with clear separation of responsibilities:
 
-- Stable performance under concurrent access  
-- Reproducibility across environments  
-- Controlled schema evolution  
-- Predictable deployment behavior  
+- **Database layer** (indexing, pre-aggregation, schema control)  
+- **API layer** (structured data access)  
+- **Reactive layer** (interactive exploration)  
+- **Container layer** (environment isolation)
 
----
-
-## 2. System Architecture
-
-The application was structured with clear separation of responsibilities:
-
-- **Database layer** for storage, indexing, and pre-aggregation  
-- **API layer** for structured data access  
-- **Reactive layer (Shiny)** for interactive exploration  
-- **Container layer** for environment isolation  
-
-This modular design reduced coupling and allowed performance improvements at the appropriate layer.
+This modular design allowed performance improvements at the appropriate layer.
 
 ---
 
-## 3. Containerization and Environment Control
+## Engineering Decisions
 
-The system was deployed using multi-stage Docker builds.
+### Containerization
 
-**Key decisions:**
-
-- Builder/runtime separation  
-- Explicit Linux system dependency installation  
+- Multi-stage Docker builds (builder/runtime separation)  
+- Explicit Linux system dependencies  
 - Locked analytical dependencies  
-- Controlled runtime configuration (ports, environment variables, library paths)  
-- CI-driven automated image builds  
+- CI-driven image builds  
 
-The objective was reproducibility and stability rather than minimal image size alone.
+### Database Strategy
 
----
+- Materialized views for expensive aggregations  
+- Targeted indexing based on access patterns  
+- Schema evolution via version-controlled migrations  
 
-## 4. Database Strategy
+### API & Reactive Optimization
 
-As query complexity increased, performance optimization focused first on the data layer.
-
-### Materialized Views
-
-Expensive aggregations were moved to materialized views in order to:
-
-- Reduce repeated computation at request time  
-- Stabilize response time variability  
-- Provide consistent structures for API consumption  
-
-Refresh strategy was aligned with acceptable data freshness constraints.
-
-### Indexing
-
-Indexes were introduced or adjusted based on:
-
-- Frequent filter patterns  
-- Join keys  
-- Grouping variables used in dashboards  
-
-The goal was targeted optimization rather than excessive indexing.
-
-### Schema Evolution
-
-Database changes were applied via version-controlled migration files (e.g., Goose), enabling:
-
-- Reproducible schema state  
-- Reviewable DDL changes  
-- Controlled updates across environments  
+- Database connection management using `dbPool`  
+- Controlled resource shutdown  
+- `eventReactive()` for user-triggered computation  
+- Isolation of heavy reactive dependencies  
 
 ---
 
-## 5. API Design and Resource Management
+# **Results**
 
-The API layer was built using Plumber.
+Performance improvements were validated empirically.
 
-**Engineering considerations:**
-
-- Database connection management with `dbPool`  
-- Controlled shutdown of database resources  
-- Avoiding per-request connection creation  
-- Limiting payload size to required fields  
-- Aligning endpoint logic with pre-aggregated database structures  
-
-This ensured stable behavior under repeated and concurrent requests.
-
----
-
-## 6. Reactive Optimization (Shiny Layer)
-
-Performance improvements were not limited to the backend.
-
-Reactive strategy included:
-
-- Using `eventReactive()` for user-triggered actions  
-- Isolating heavy computations to avoid broad invalidations  
-- Reducing unnecessary recomputation  
-- Minimizing UI re-rendering  
-
-This reduced latency spikes during interactive use.
-
----
-
-## 7. Performance results
----
-Performance improvements were validated empirically after architectural changes.
-
-
-### End-to-End Session Duration (per user session)
+### End-to-End Session Duration
 
 | Architecture | Median (s) | SD (s) |
 |---|---:|---:|
 | Classic | 115.9 | 0.8 |
 | New | 45.2 | 1.2 |
 
-
----
-
 ### Interaction Latency Under Concurrency 
 
-| Architecture | Metric | Typical range (s) | Notable behavior |
+| Architecture | Metric | Typical range (s) | Behavior |
 |---|---|---:|---|
-| New | p50 (median) | ~0.05–0.12 | Low typical latency across concurrency |
-| New | p95 (tail) | ~0.10–1.30 | Spike around concurrency ~2 (tail instability) |
-| Classic | p50 (median) | ~0.03–0.06 | Stable and consistently low |
-| Classic | p95 (tail) | ~0.12–0.20 | Relatively stable tail latency |
+| New | p50 | ~0.05–0.12 | Low typical latency |
+| New | p95 | ~0.10–1.30 | Reduced tail variability |
+| Classic | p50 | ~0.03–0.06 | Stable but less optimized flow |
+| Classic | p95 | ~0.12–0.20 | Moderate tail latency |
 
-These results validated database pre-aggregation, API refinement, and reactive optimization decisions.
+These results validated the layered optimization strategy across database, API, and reactive layers.
 
 ---
 
-## Appendix: Deployment Workflow
+## Deployment Workflow
 
-For a detailed reference implementation of the CI/CD and Docker Buildx setup:
+For detailed CI/CD and Docker Buildx configuration:
 
-→ [Deployment guide (Docker Buildx + CI/CD)](deployment-guide-buildx-ci.md)
+→ [Deployment guide](deployment-guide-buildx-ci.md)
