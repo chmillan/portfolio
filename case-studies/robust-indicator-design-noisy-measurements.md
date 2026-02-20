@@ -1,6 +1,6 @@
-  ---
-title: Robust Indicator Design for Noisy Performance Measurements
----
+  
+# Robust Indicator Design for Noisy Performance Measurements
+
 
 **Simulation-based evaluation of robust estimators under high variability**
 

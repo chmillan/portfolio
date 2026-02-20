@@ -1,7 +1,3 @@
----
-title: Large-Scale Connectivity Assessment Using Administrative and Measurement Data
----
-
 # Large-Scale Connectivity Assessment Using Administrative and Measurement Data
 
 > Public project · Open data · Conference presentation · Media coverage
