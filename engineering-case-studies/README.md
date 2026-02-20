@@ -19,4 +19,6 @@ Design and evolution of a containerized analytical system combining database opt
 - Reactive optimization in Shiny  
 - Load testing and validation  
 
+**Performance improvements** were validated empirically, including substantial reduction in session duration and improved latency stability under concurrency.
+
 → [Read full case study](analytical-platform-engineering.md)
