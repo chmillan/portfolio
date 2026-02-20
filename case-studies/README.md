@@ -48,7 +48,7 @@ Development of statistically resilient indicators capable of summarizing highly 
 - Sensitivity analysis  
 - Bias–variance trade-offs  
 
-→ (coming soon)
+→ [Read full case study](robust-indicator-design-noisy-measurements.md)
 
 ---
 
