@@ -1,4 +1,4 @@
-# ⚙️ Engineering Case Studies  
+# Engineering Case Studies  
 **Reproducible analytical systems and production-oriented design**
 
 This section presents selected projects focused on the engineering layer of analytical work: system architecture, reproducibility, containerization, and deployment-ready design.
@@ -16,12 +16,12 @@ Design and implementation of a containerized Shiny and API-based analytical syst
 - Multi-stage Docker builds (builder + runtime separation)
 - Explicit Linux system dependency management (GDAL, libpq, etc.)
 - Reproducible environments with locked dependencies
-- Git-based workflow with structured commits
-- GitLab CI pipeline for automated image build and registry publishing
-- Separation between data processing, API, and visualization layers
-- Runtime stability and resource cleanup
+- CI-driven automated image builds  
+- Modular separation of processing, API, and visualization layers  
 
-→ (coming soon)
+
+→ [Read full case study](containerized-analytical-platform.md)  
+→ [Deployment guide (Docker Buildx + CI/CD)](deployment-guide-buildx-ci.md)
 
 ---
 
