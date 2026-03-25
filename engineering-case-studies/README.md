@@ -23,7 +23,7 @@ Design and evolution of a containerized analytical system combining database opt
 
 → [Read full case study](analytical-platform-engineering.md)
 
-### Distributed Spark Execution in Kubernetes  
-Driver–executor communication and network configuration  
+### Production Health Data Pipeline  
+Multi-job architecture for incremental ingestion and analytical consistency  
 
-→ [Read case study](spark-driver-networking.md)
+→ [Read case study](health-data-pipeline.md)
