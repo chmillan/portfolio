@@ -23,7 +23,18 @@ Design and evolution of a containerized analytical system combining database opt
 
 → [Read full case study](analytical-platform-engineering.md)
 
-### Production Health Data Pipeline  
-Multi-job architecture for incremental ingestion and analytical consistency  
+## Production Health Data Pipeline  
+
+Multi-job architecture for incremental data ingestion and analytical consistency in a production environment.
+
+**Engineering scope:**
+
+- Coordination of materialized view refreshes  
+- Automated detection of new public dataset versions  
+- Incremental data extraction and persistence (PostgreSQL → Parquet)  
+- Distributed processing using Spark in Kubernetes  
+- Separation of concerns across independent jobs  
+
+The system transformed a manual and potentially inconsistent update process into a reliable, automated, and scalable data pipeline.
 
 → [Read case study](health-data-pipeline.md)
