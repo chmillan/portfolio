@@ -22,3 +22,8 @@ Design and evolution of a containerized analytical system combining database opt
 **Performance improvements** were validated empirically, including substantial reduction in session duration and improved latency stability under concurrency.
 
 → [Read full case study](analytical-platform-engineering.md)
+
+### Distributed Spark Execution in Kubernetes  
+Driver–executor communication and network configuration  
+
+→ [Read case study](engineering-case-studies/spark-kubernetes-networking.md)
