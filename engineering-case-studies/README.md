@@ -26,4 +26,4 @@ Design and evolution of a containerized analytical system combining database opt
 ### Distributed Spark Execution in Kubernetes  
 Driver–executor communication and network configuration  
 
-→ [Read case study](engineering-case-studies/spark-kubernetes-networking.md)
+→ [Read case study](engineering-case-studies/spark-driver-networking.md)
