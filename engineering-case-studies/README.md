@@ -1,13 +1,32 @@
-# Engineering Case Studies  
-**Reproducible analytical systems and production-oriented design**
+# 🧾 Engineering Case Studies  
+**Design and engineering of reproducible, scalable, and production-ready analytical systems**
 
-This section presents selected projects focused on the engineering layer of analytical work: system architecture, reproducibility, containerization, and deployment-ready design.
+This section presents selected projects focused on the engineering of data-driven systems, including architecture, reproducibility, and production-ready design.
 
-While the analytical track emphasizes statistical modeling, this track highlights how analytical systems are structured to be stable, scalable, and reproducible under real-world constraints.
+The emphasis is on how analytical systems are structured to be scalable, maintainable, and reliable under real-world constraints.
 
 ---
 
-## End-to-End Engineering of an Analytical Platform
+## Managerial Dashboard Platform  
+
+Design and evolution of a managerial application to centralize the monitoring of initiatives and projects in a fast, scalable, and production-ready interface.
+
+**Engineering scope:**
+
+- Transition from CSV-based prototype to parquet and API-based architecture  
+- Modular Shiny application design with clear separation of concerns  
+- Data access abstraction layer (`data_loader`) to decouple sources  
+- Spark-based data exploration and local sampling strategy  
+- Environment-aware configuration for deployment flexibility  
+- Observability and data validation planning  
+
+The project demonstrates how a dashboard can evolve from a local prototype into a production-ready system, balancing performance, scalability, and maintainability while supporting real-world managerial workflows.
+
+→ [Read full case study](managerial-dashboard-platform.md)
+
+---
+
+## End-to-End Analytical Platform Engineering  
 
 Design and evolution of a containerized analytical system combining database optimization, API integration, reactive tuning, and CI-driven deployment.
 
@@ -19,9 +38,11 @@ Design and evolution of a containerized analytical system combining database opt
 - Reactive optimization in Shiny  
 - Load testing and validation  
 
-**Performance improvements** were validated empirically, including substantial reduction in session duration and improved latency stability under concurrency.
+Performance improvements were validated empirically, improving responsiveness and stability under concurrent usage.
 
 → [Read full case study](analytical-platform-engineering.md)
+
+---
 
 ## Production Health Data Pipeline  
 
@@ -38,3 +59,12 @@ Multi-job architecture for incremental data ingestion and analytical consistency
 The system transformed a manual and potentially inconsistent update process into a reliable, automated, and scalable data pipeline.
 
 → [Read case study](health-data-pipeline.md)
+
+---
+
+## What This Portfolio Demonstrates
+
+- Ability to design scalable data-driven systems  
+- Strong understanding of data pipelines and system architecture  
+- Experience with production-ready practices (deployment, observability, validation)  
+- Clear separation between data, backend, and frontend layers  
